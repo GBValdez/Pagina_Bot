@@ -1,0 +1,223 @@
+
+body{
+    background: radial-gradient(circle at center center,rgb(3, 0, 29),rgb(0, 0, 0));
+   
+}
+.Todo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    color: white;
+    animation: Iluminacion 1s infinite alternate;
+    width: 70%;
+}
+li{
+    list-style: none;
+    font-size: 104%;
+}
+p{
+    font-size: 104%;
+}
+.Cara{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    margin: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    min-height: 200px;
+}
+.Borde{
+    position: absolute;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.Rojo{
+    height: 90%;
+    width: 90%;
+    border: 0.7vw solid transparent;
+    border-top: 0.7vw solid red ;
+    border-bottom: 0.7vw solid red;
+    animation: Ilumirojo 1s alternate infinite ease-in-out,Vueltas 1s infinite;
+}
+
+.Verde{
+    height: 100%;
+    width: 100%;
+    border: 0.7vw solid transparent;
+    border-top: 0.7vw solid greenyellow ;
+    border-bottom: 0.7vw solid greenyellow;
+    animation: Ilumiverde 1s ease-in-out infinite alternate,Vueltas 2s infinite;
+}
+.Titulo{
+    position: absolute;
+    color: white;
+    bottom: -20%;
+    font-size: 5vw;
+    text-shadow: 0 0 10px white;
+    animation: Iluminacion 1s alternate infinite ease-in-out;
+    
+}
+
+
+@keyframes Vueltas {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes Iluminacion{
+    0%{
+        text-shadow: 0 0 6px white;
+    }
+    100%{
+        text-shadow: 0 0 10px white;
+    }
+}
+
+@keyframes Iluminape{
+    0%{
+        text-shadow: 0 0 3px white;
+    }
+    100%{
+        text-shadow: 0 0 6px white;
+    }
+}
+@keyframes Ilumiblanco{
+    0%{
+        box-shadow: 0 0 7px white,inset 0 0 7px white;
+    }
+    100%{
+        box-shadow: 0 0 10px white, inset 0 0 10px white;
+    }
+}
+@keyframes Ilumiverde{
+    0%{
+        box-shadow: 0 0 7px greenyellow, inset  0 0 7px greenyellow;
+    }
+    100%{
+        box-shadow: 0 0 10px greenyellow, inset  0 0 10px greenyellow;
+    }
+}
+@keyframes Ilumirojo{
+    0%{
+        box-shadow: 0 0 7px red, inset  0 0 7px red;
+    }
+    100%{
+        box-shadow: 0 0 10px red, inset  0 0 10px red;
+    }
+}
+.Oculares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+}
+.Ojos{
+    border: 0.7vw solid white;
+    height: 100%;
+    border-radius: 50%;
+    width: 20%;
+    margin: 10px;
+    transform-origin: center;
+    animation: Ilumiblanco 1s ease-in-out infinite alternate;
+}
+
+.Apagado{
+    display: inline-block;
+    animation: Letrapagado 1.5s infinite;
+}
+@keyframes Letrapagado{
+    0%{
+        color: white;
+        text-shadow: 0 0 7px white;
+    }
+    10%{
+        color: rgb(146, 146, 146);
+        text-shadow: 0 0 5px rgb(146, 146, 146);
+    }
+
+    25%{
+        color: white;
+        text-shadow: 0 0 7px white;
+    }
+    30%{
+        color: rgb(146, 146, 146);
+        text-shadow: 0 0 5px rgb(146, 146, 146);
+    }
+    40%{
+        color: white;
+        text-shadow: 0 0 7px white;
+    }
+    100%{
+        color: white;
+        text-shadow: 0 0 10px white;
+    }
+}
+.Boton{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.Boton a{
+    padding: 20px 50px;
+    border: 5px solid greenyellow ;
+    color: greenyellow;
+    text-decoration: none;
+    border-radius: 50%;
+    animation: Ilumitextverde 1s ease-in-out  infinite alternate,Ilumiverde 1s ease-in-out infinite alternate;
+    transition: 500ms ease;
+}
+.Boton a:hover{
+    border: 5px solid rgb(181, 253, 74) ;
+    color: rgb(181, 253, 74);
+    transition: 200ms ease-out;
+    animation: Ilumitextverdeapagado 1s ease-in-out  infinite alternate,Ilumiverdeapagado 1s ease-in-out infinite alternate;
+}
+.Boton a:active{
+    transform: scale(1.05);
+    transition: 100ms ease-out;
+}
+@keyframes Ilumiverdeapagado{
+    0%{
+        box-shadow: 0 0 10px rgb(181, 253, 74), inset  0 0 10px rgb(181, 253, 74);
+    }
+    100%{
+        box-shadow: 0 0 13px rgb(181, 253, 74), inset  0 0 13px rgb(181, 253, 74);
+    }
+}
+@keyframes Ilumitextverde{
+    0%{
+        text-shadow: 0 0 7px greenyellow;
+    }
+    100%{
+        text-shadow: 0 0 10px greenyellow;
+    }
+}
+@keyframes Ilumitextverdeapagado{
+    0%{
+        text-shadow: 0 0 8px rgb(181, 253, 74);
+    }
+    100%{
+        text-shadow: 0 0 10px rgb(181, 253, 74);
+    }
+}
