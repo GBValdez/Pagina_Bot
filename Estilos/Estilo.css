@@ -53,7 +53,8 @@ p{
     border: 0.7vw solid transparent;
     border-top: 0.7vw solid red ;
     border-bottom: 0.7vw solid red;
-    animation: Ilumirojo 1s alternate infinite ease-in-out,Vueltas 1s infinite;
+    animation: /*Ilumirojo 1s alternate infinite ease-in-out,*/Vueltas 1s infinite;
+    box-shadow: 0 0 10px red, inset  0 0 10px red;
 }
 
 .Verde{
@@ -62,7 +63,8 @@ p{
     border: 0.7vw solid transparent;
     border-top: 0.7vw solid greenyellow ;
     border-bottom: 0.7vw solid greenyellow;
-    animation: Ilumiverde 1s ease-in-out infinite alternate,Vueltas 2s infinite;
+    animation: /*Ilumiverde 1s ease-in-out infinite alternate,*/Vueltas 2s infinite;
+    box-shadow: 0 0 10px greenyellow, inset  0 0 10px greenyellow;
 }
 .Titulo{
     position: absolute;
@@ -70,7 +72,8 @@ p{
     bottom: -20%;
     font-size: 5vw;
     text-shadow: 0 0 10px white;
-    animation: Iluminacion 1s alternate infinite ease-in-out;
+    /*animation: Iluminacion 1s alternate infinite ease-in-out;*/
+    text-shadow: 0 0 10px white, inset  0 0 10px white;
     
 }
 
@@ -110,14 +113,18 @@ p{
     color: greenyellow;
     text-decoration: none;
     border-radius: 50%;
-    animation: Ilumitextverde 1s ease-in-out  infinite alternate,Ilumiverde 1s ease-in-out infinite alternate;
+    /*animation: Ilumitextverde 1s ease-in-out  infinite alternate,Ilumiverde 1s ease-in-out infinite alternate;*/
     transition: 500ms ease;
+    text-shadow: 0 0 10px greenyellow;
+    box-shadow: 0 0 10px greenyellow, inset  0 0 10px greenyellow;
 }
 .Boton a:hover{
     border: 5px solid rgb(181, 253, 74) ;
     color: rgb(181, 253, 74);
     transition: 200ms ease-out;
-    animation: Ilumitextverdeapagado 1s ease-in-out  infinite alternate,Ilumiverdeapagado 1s ease-in-out infinite alternate;
+    /*animation: Ilumitextverdeapagado 1s ease-in-out  infinite alternate,Ilumiverdeapagado 1s ease-in-out infinite alternate;*/
+    text-shadow: 0 0 10px rgb(181, 253, 74);
+    box-shadow: 0 0 10px rgb(181, 253, 74), inset  0 0 10px rgb(181, 253, 74);
 }
 .Boton a:active{
     transform: scale(1.05);
