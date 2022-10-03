@@ -14,7 +14,8 @@ body{
 
 main{
     color: white;
-    animation: Iluminacion 1s infinite alternate;
+    /*animation: Iluminacion 1s infinite alternate;*/
+    text-shadow: 0 0 10px white;
     width: 70%;
 }
 li{
@@ -74,6 +75,107 @@ p{
 }
 
 
+
+.Oculares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+}
+.Ojos{
+    border: 0.7vw solid white;
+    height: 100%;
+    border-radius: 50%;
+    width: 20%;
+    margin: 10px;
+    transform-origin: center;
+    animation: Ilumiblanco 1s ease-in-out infinite alternate;
+}
+
+.Apagado{
+    display: inline-block;
+    animation: Letrapagado 1.5s infinite;
+}
+
+.Boton{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.Boton a{
+    padding: 20px 50px;
+    border: 5px solid greenyellow ;
+    color: greenyellow;
+    text-decoration: none;
+    border-radius: 50%;
+    animation: Ilumitextverde 1s ease-in-out  infinite alternate,Ilumiverde 1s ease-in-out infinite alternate;
+    transition: 500ms ease;
+}
+.Boton a:hover{
+    border: 5px solid rgb(181, 253, 74) ;
+    color: rgb(181, 253, 74);
+    transition: 200ms ease-out;
+    animation: Ilumitextverdeapagado 1s ease-in-out  infinite alternate,Ilumiverdeapagado 1s ease-in-out infinite alternate;
+}
+.Boton a:active{
+    transform: scale(1.05);
+    transition: 100ms ease-out;
+}
+
+@keyframes Ilumiverdeapagado{
+    0%{
+        box-shadow: 0 0 10px rgb(181, 253, 74), inset  0 0 10px rgb(181, 253, 74);
+    }
+    100%{
+        box-shadow: 0 0 13px rgb(181, 253, 74), inset  0 0 13px rgb(181, 253, 74);
+    }
+}
+@keyframes Ilumitextverde{
+    0%{
+        text-shadow: 0 0 7px greenyellow;
+    }
+    100%{
+        text-shadow: 0 0 10px greenyellow;
+    }
+}
+@keyframes Ilumitextverdeapagado{
+    0%{
+        text-shadow: 0 0 8px rgb(181, 253, 74);
+    }
+    100%{
+        text-shadow: 0 0 10px rgb(181, 253, 74);
+    }
+}
+
+@keyframes Letrapagado{
+    0%{
+        color: white;
+        text-shadow: 0 0 7px white;
+    }
+    10%{
+        color: rgb(146, 146, 146);
+        text-shadow: 0 0 5px rgb(146, 146, 146);
+    }
+
+    25%{
+        color: white;
+        text-shadow: 0 0 7px white;
+    }
+    30%{
+        color: rgb(146, 146, 146);
+        text-shadow: 0 0 5px rgb(146, 146, 146);
+    }
+    40%{
+        color: white;
+        text-shadow: 0 0 7px white;
+    }
+    100%{
+        color: white;
+        text-shadow: 0 0 10px white;
+    }
+}
 @keyframes Vueltas {
     0%{
         transform: rotate(0deg);
@@ -122,102 +224,5 @@ p{
     }
     100%{
         box-shadow: 0 0 10px red, inset  0 0 10px red;
-    }
-}
-.Oculares{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40%;
-    width: 100%;
-}
-.Ojos{
-    border: 0.7vw solid white;
-    height: 100%;
-    border-radius: 50%;
-    width: 20%;
-    margin: 10px;
-    transform-origin: center;
-    animation: Ilumiblanco 1s ease-in-out infinite alternate;
-}
-
-.Apagado{
-    display: inline-block;
-    animation: Letrapagado 1.5s infinite;
-}
-@keyframes Letrapagado{
-    0%{
-        color: white;
-        text-shadow: 0 0 7px white;
-    }
-    10%{
-        color: rgb(146, 146, 146);
-        text-shadow: 0 0 5px rgb(146, 146, 146);
-    }
-
-    25%{
-        color: white;
-        text-shadow: 0 0 7px white;
-    }
-    30%{
-        color: rgb(146, 146, 146);
-        text-shadow: 0 0 5px rgb(146, 146, 146);
-    }
-    40%{
-        color: white;
-        text-shadow: 0 0 7px white;
-    }
-    100%{
-        color: white;
-        text-shadow: 0 0 10px white;
-    }
-}
-.Boton{
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    margin: 20px 0px;
-}
-.Boton a{
-    padding: 20px 50px;
-    border: 5px solid greenyellow ;
-    color: greenyellow;
-    text-decoration: none;
-    border-radius: 50%;
-    animation: Ilumitextverde 1s ease-in-out  infinite alternate,Ilumiverde 1s ease-in-out infinite alternate;
-    transition: 500ms ease;
-}
-.Boton a:hover{
-    border: 5px solid rgb(181, 253, 74) ;
-    color: rgb(181, 253, 74);
-    transition: 200ms ease-out;
-    animation: Ilumitextverdeapagado 1s ease-in-out  infinite alternate,Ilumiverdeapagado 1s ease-in-out infinite alternate;
-}
-.Boton a:active{
-    transform: scale(1.05);
-    transition: 100ms ease-out;
-}
-@keyframes Ilumiverdeapagado{
-    0%{
-        box-shadow: 0 0 10px rgb(181, 253, 74), inset  0 0 10px rgb(181, 253, 74);
-    }
-    100%{
-        box-shadow: 0 0 13px rgb(181, 253, 74), inset  0 0 13px rgb(181, 253, 74);
-    }
-}
-@keyframes Ilumitextverde{
-    0%{
-        text-shadow: 0 0 7px greenyellow;
-    }
-    100%{
-        text-shadow: 0 0 10px greenyellow;
-    }
-}
-@keyframes Ilumitextverdeapagado{
-    0%{
-        text-shadow: 0 0 8px rgb(181, 253, 74);
-    }
-    100%{
-        text-shadow: 0 0 10px rgb(181, 253, 74);
     }
 }
