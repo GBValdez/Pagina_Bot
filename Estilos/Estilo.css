@@ -21,6 +21,7 @@ main{
 li{
     list-style: none;
     font-size: 104%;
+    margin-bottom: 5px;
 }
 p{
     font-size: 104%;
@@ -130,6 +131,25 @@ p{
     transform: scale(1.05);
     transition: 100ms ease-out;
 }
+
+ul,ol{
+    display: none;
+    opacity: 0;
+}
+
+
+h2:hover + ul, h2:hover + ol{
+    display: block;
+    opacity: 1;
+    transition: 500ms ease;
+}
+ul:hover,ol:hover{
+    display: block;
+    opacity: 1;
+    transition: 500ms ease;
+}
+
+
 
 @keyframes Ilumiverdeapagado{
     0%{
